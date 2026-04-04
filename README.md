@@ -4,6 +4,7 @@ A header-only, type-safe dynamic array implementation for C. It uses a "hidden h
 ## How it Works
 
 The implementation stores a VectorHeader struct in memory immediately preceding the array data.
+
 <code>[ Capacity | Size ] [ Element 0 | Element 1 | Element 2 | ... ] 
 ^ Header ^ Your pointer (v) points here </code>
 
