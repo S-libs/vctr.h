@@ -35,6 +35,13 @@ typedef struct {
     } \
 } while(0)
 
+#define vec_clear(v) do { \
+    if (v) { \
+        memset((v), 0, vec_size(v) * sizeof(*(v))); \
+        vec_header(v)->size = 0; \
+    } \
+} while(0)
+
 
 #define vec_free(v) do { \
     if (v) { free(vec_header(v)); (v) = NULL; } \
